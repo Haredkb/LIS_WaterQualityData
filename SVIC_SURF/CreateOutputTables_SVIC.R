@@ -12,7 +12,7 @@ baseflow_dates <- tar_read(baseflow_dates)
 # BaseFlowSample_NO3 <- tar_read(BaseFlowSample_NO3)
 BaseFlowSample_allWQ <- tar_read(BaseFlowSample_allWQ)
 # All_data <- tar_read(WQP_df_N)
-dat_WQ<- readRDS("data/WQ_SVIC_Display.RDS")
+dat_WQ<- readRDS("data/WQ_SVIC_Display.RDS")# from SVIC_LISDatabase_CleanUp.R
 
 
 ### Delete unnecessary columns

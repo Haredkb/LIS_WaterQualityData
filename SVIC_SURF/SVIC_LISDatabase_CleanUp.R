@@ -42,9 +42,9 @@ dat_NO3 <- as.data.frame(BaseFlowSample_allWQ) %>%
   dplyr::filter(str_detect(CharacteristicName, "Nitrate"))%>% 
   dplyr::filter(USGSPCode != 83353) %>% #remove atmospheric deposition values 
   mutate(#deal with non detects first to simply approach
-    ResultMeasureValue = coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
+    ResultMeasureValue = dplyr::coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
     Result_ND = ifelse(ResultDetectionConditionText == "Detect", FALSE, TRUE),
-    ResultMeasure.MeasureUnitCode = tolower(coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
+    ResultMeasure.MeasureUnitCode = tolower(dplyr::coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
     site_id = MonitoringLocationIdentifier,
     DateTime = ActivityStartDateTime,
     Date = ActivityStartDate,
@@ -121,9 +121,9 @@ dat_PO4<- BaseFlowSample_allWQ %>%
   dplyr::filter(CharacteristicName %in% phosphate_names)%>%
   dplyr::select(MonitoringLocationIdentifier, USGSPCode, CharacteristicName, ActivityStartDate, ActivityStartDateTime, ActivityStartDateTime, ResultSampleFractionText, ResultMeasureValue,ResultMeasure.MeasureUnitCode, DetectionQuantitationLimitMeasure.MeasureValue, DetectionQuantitationLimitMeasure.MeasureUnitCode, ResultDetectionConditionText, BaseflowConditions) %>%
   mutate(#deal with non detects first to simply approach
-         ResultMeasureValue = coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
+         ResultMeasureValue = dplyr::coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
          Result_ND = ifelse(ResultDetectionConditionText == "Detect", FALSE, TRUE),
-         ResultMeasure.MeasureUnitCode = tolower(coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
+         ResultMeasure.MeasureUnitCode = tolower(dplyr::coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
          site_id = MonitoringLocationIdentifier,
          Date = ActivityStartDate,
          DateTime = ActivityStartDateTime,
@@ -335,9 +335,9 @@ df_CharCount <- BaseFlowSample_allWQ %>%
 dat_WQ <- BaseFlowSample_allWQ %>% 
   dplyr::select(MonitoringLocationIdentifier, USGSPCode, ResultMeasureValue, CharacteristicName, ActivityStartDate, ActivityStartDateTime, ActivityStartDateTime, ResultSampleFractionText, ResultMeasure.MeasureUnitCode, DetectionQuantitationLimitMeasure.MeasureValue, DetectionQuantitationLimitMeasure.MeasureUnitCode, ResultDetectionConditionText, BaseflowConditions) %>%
   mutate(#deal with non detects first to simply approach
-    Value = coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
+    Value = dplyr::coalesce(as.numeric(ResultMeasureValue),as.numeric(DetectionQuantitationLimitMeasure.MeasureValue)), #nondetect and detects together 
     Result_ND = ifelse(ResultDetectionConditionText == "Detect", FALSE, TRUE),
-    ResultMeasure.MeasureUnitCode = tolower(coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
+    ResultMeasure.MeasureUnitCode = tolower(dplyr::coalesce(ResultMeasure.MeasureUnitCode,DetectionQuantitationLimitMeasure.MeasureUnitCode)),
     site_id = MonitoringLocationIdentifier,
     date = ActivityStartDate,
     DateTime = ActivityStartDateTime,

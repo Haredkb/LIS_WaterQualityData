@@ -50,3 +50,5 @@ rsconnect/
 
 #processing files
 PROCESSING_STEPS/
+*.RDS
+data/WQ_SVIC_FinalDownloadFile.csv
