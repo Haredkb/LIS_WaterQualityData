@@ -1,0 +1,65 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+.Random.seed|object|4fb8eee1980ad418|||||||||||||||
+baseflow_dates|stem|1920aea553808e8b|deab877e40bb0c02|ae1de2c6622ad138|1200166925||t19452.7949464655s|cef6562fabbf0a90|973487|rds|local|vector|||6.36||
+baseflow_df|stem|ff37bea580a694ea|ed15693eb8605a59|fe7e8f906506e1c4|-2118826724||t19452.794853693s|39d60cf39fabbbe7|23387547|rds|local|vector|||751.22||
+baseflow_regression|function|7be3b3c6043966f3|||||||||||||||
+BaseFlowSample_allWQ|stem|8c51e572b0076069|ad247cad3e97ef78|c2d91128c6bb265b|1385337125||t19465.9984201187s|18bb8ade807eed5a|48890746|rds|local|vector|||14.34||
+BaseFlowSample_Loc|stem|fb31b80fc0fe787b|fd359a0b6e27f521|4a2615c95f5f103f|-1064092927||t19453.8473040579s|7898e7310a760865|8058800|rds|local|vector|||2.13||
+BaseFlowSample_NO3|stem|3bf4cb77c2ab9238|fd359a0b6e27f521|5e248bca4a76248d|-1569503264||t19465.9971033178s|0776f8c75a534d98|6127718|rds|local|vector|||1.14||
+bbox|stem|830a4495d42208ec|8a2cdc643f4568a1|7dd4d30378abc541|1071912171||t19439.6124485953s|2713ecd31269f3fd|523|rds|local|vector|||0||
+bbox_num|stem|830a4495d42208ec|8a2cdc643f4568a1|7dd4d30378abc541|1141525197||t19439.6484636565s|2713ecd31269f3fd|523|rds|local|vector|||0||
+bbox_sf|stem|580032bafd50a440|6f17fe23b7e49fe4|fc1ecea326dd8384|2112798798||t19439.6124488492s|5dcb277c4c88a544|625|rds|local|vector|||0||
+catchment|stem|f83893e6a79078c0|6ee56d98cc25a58b|f792e73684b22615|1279756738||t19445.7772262793s|71f997a8a41fa205|542721574|rds|local|vector|||105.49||
+clean_NWIS_table|function|e652286cc54bc7a5|||||||||||||||
+cleanUnits|function|ef9604cac873e9eb|||||||||||||||
+cleanUnits_NO3|function|f41a59ae6a3e2c96|||||||||||||||
+connection|object|627a7f773a92f83a|||||||||||||||
+CT_hydro|stem|11f972b553984874|8c62b15a76ae374c|9d2ef4ff7e1b0aae|-1270466029||t19439.7921884008s|5cb506b002a99fdc|12041966|rds|local|vector|||2.16||
+Dam_10km|stem|72ebc9f3cb3b3ec3|bac78bb605b028ac|6028dd45300256b3|-235994246||t19446.5586916785s|3bd8f66805fd112b|45|rds|local|vector|||0|Unknown or uninitialised column UpstreamCOMID.. Unknown or uninitialised column UpstreamCOMID.|
+Dam_infl|stem|f2e629e0b74bd2c0|49649d7304ba49dc|541667ce9c038c65|1716048808||t19446.8902742919s|6f270744e272a6bb|425458|rds|local|vector|||1040.48|attribute variables are assumed to be spatially constant throughout all geometries|
+DefineSites|function|a662375824acd5c6|||||||||||||||
+Diversion_infl|stem|39917ac8a465ded4|c1ed93eddf4bc115|64d89c99c3be256a|-811020162||t19446.5572703574s|21d4862db7c05981|684762|rds|local|vector|||13.33|repeating attributes for all subgeometries for which they may not be constant|
+downloadWQP|function|4974b6fe985cc300|||||||||||||||
+end.date|object|426d4b852cb377b6|||||||||||||||
+filterBaseFlow|function|332180f5d652addc|||||||||||||||
+filterParameter|function|f7ea7176fd7b699c|||||||||||||||
+fix_flowlines|function|e992fbf99a73bdf0|||||||||||||||
+flowlines|stem|e22ced6053c50355|81769c7515bf4338|c4b2332939477b61|-1610911349||t19446.5570158029s|a72688e03d452cef|131498258|rds|local|vector|||36.16|st_crs  replacing crs does not reproject data use st_transform for that|
+flowlines_RDS_file|stem||502f40d5f4d54997|ef46db3751d8e999|1179078356|data/sample_measurements.csv|t19439.1147496335s||0|file|local|vector|||||_paths_ 31mmissing files datasample_measurements.csv39m
+get_daily_baseflow_stats|function|5914ef94212187b3|||||||||||||||
+get_dam_reaches|function|d1a043f26aac6df9|||||||||||||||
+get_dam_reaches_flo|function|233ab876f2425f4e|||||||||||||||
+get_diversion_reaches|function|6279c3c6ca6a6ead|||||||||||||||
+get_N_siteList|function|2b55792b61247357|||||||||||||||
+get_Nsites|function|b02eb29e7c6129cc|||||||||||||||
+get_wwtp_downstream_reaches|function|120b83fb5de9fe25|||||||||||||||
+LIS_DB_sf_file|stem|88a61d57ebea98a6|6c5e6b5b771600f5|ef46db3751d8e999|992799625|..//LIS_Database_Points.shp|t19415.7867153136s|8636aecad3dd37fb|39272|file|local|vector|||0||
+LIS_DB_SW|stem|09afe2c812b58509|747a3243e4670101|36b0bf47ee4f35dc|278396414||t19440.6756809627s|fb5f9006a79d4f44|31569827|rds|local|vector|||28.94||
+LIS_DB_SW_NHD|stem|c9104791e226baa8|ca27fbe87e16ef90|54e56e37587dc296|1923098806||t19444.7859447279s||149005|rds|local|vector|||0.05||Cant subset columns that dont exist.31mx39m Column TotDASqKM doesnt exist.
+LIS_dbLoc|stem|ba1198c024846918|64f92352afa6b0a7|9d2ef4ff7e1b0aae|1866033484||t19443.6494294448s|eac88f040cd483a5|118657|rds|local|vector|||0.06||
+LIS_poly|stem|43fad4100245890c|3cc5cb7937d01141|9d2ef4ff7e1b0aae|-950952059||t19439.6765438318s|cf1883f24761ed73|1276136|rds|local|vector|||0.06||
+LIS_WQP_SW_NHD|stem|b484722ae0fcb0a3|d772fccd9a72de7b|8febe19734d9490e|1753719268||t19446.5588458255s|d36a231a6406723b|159963|rds|local|vector|||13.24|st_buffer does not correctly buffer longitudelatitude data|
+minBFSS|stem|82b417759406b8e5|8a060d42b3b3de8e|ef46db3751d8e999|-756422466||t19439.65300228s|7593c903cc1c2e97|52|rds|local|vector|||0||
+minStorageAcreFt|stem|8c6a38fd9594f6b7|5eaae1afb1ac0b1b|ef46db3751d8e999|-1538277385||t19439.64846271s|7593c903cc1c2e97|52|rds|local|vector|||0||
+model_points|stem|bac5e7bc1d351da6|79e0daf5029a86c4|3ebcacd093a7d00c|-1559286709||t19439.6124483413s|55734a10311ecf25|106717|rds|local|vector|||0.06||
+modelBoundary|stem|bac5e7bc1d351da6|79e0daf5029a86c4|3ebcacd093a7d00c|-1456107691||t19439.6052479687s|55734a10311ecf25|106717|rds|local|vector|||0.07||
+modelBoundaryFile|stem|6db92381d82d26d7|fed48face356405f|39454b17923ad216|1527902975||t19439.5973202832s|23ac6355ac998754|106640|rds|local|vector|||0.14||
+N_refsites|stem|60a133d9307f14f4|ef92b5bc22049260|cc5a4e943c4d27e4|1483982567||t19450.6853674251s|5b3e049435dcca5f|97015|rds|local|vector|||0.06||
+N_sites|stem|6ab3ce80047f8652|acb496ff1f0c47b1|e5ee198c6040cecb|1615288993||t19452.7948621966s|7a32cb06effd1779|161288|rds|local|vector|||0.14||
+NHDjoin|function|e67fa7cb74045310|||||||||||||||
+NID_df|stem|91994580443fb5ac|a2f8f64899154fce|32dc3289912d0ee1|-827844718||t19439.5973299819s|fd7034ff6d09da5c|574588|rds|local|vector|||0.6||
+NID_file|stem|27c2613c0cd16968|2bc3510f59f8d0c4|ef46db3751d8e999|-2000689262|..//NID_NE.csv|t19436.6857884734s|e3a305a27b1c9ee2|4201884|file|local|vector|||0||
+NO3_data|stem|30848ddf23d5b0bb|173e6d76b847855e|d444f41ec405cddb|1497195169||t19465.7722587967s|4d88acb77c64304b|4445779|rds|local|vector|||1.48||
+Q_refsites|stem|278f381fc1ef840f|69f0ca99aedf6d1c|efe02a56f161c7a7|1848830362||t19452.7860111516s|aeaf40dbfee023de|17849|rds|local|vector|||25.96|attribute variables are assumed to be spatially constant throughout all geometries. st_buffer does not correctly buffer longitudelatitude data|
+QFthresh|stem|99a0da6a7b060a69|5f5816a83b478ab7|ef46db3751d8e999|-347748962||t19439.6530018398s|7593c903cc1c2e97|52|rds|local|vector|||0||
+Reaches_BelowDam|function|dc64b516fc9933cf|||||||||||||||
+RefSampleSites|function|88fadcd89cba378b|||||||||||||||
+RefStreamSites|function|c5cf103b6f80b08e|||||||||||||||
+siteSF|stem||f270936fd8b6693c|3e30ef9350723651|1510822422||t19440.6756858345s||0|rds|local|vector|||0||could not find function get_N_siteList
+start.date|object|59f80404aedba89e|||||||||||||||
+stateList|stem|baadb448e9f395aa|a6135d41f2cfbe5a|a3dad144c40657ed|-196984435||t19439.5968515148s|98bde5196c354f79|70|rds|local|vector|||0||
+target|stem||8ee3181dd79d0323|a597acbbcf613e98|-1574827255||t19439.6053851932s||0|rds|local|vector|||12.47||must have max  min
+times_of_baseflow|function|436d3eb4aaf07a38|||||||||||||||
+WQP_df_N|stem|cda10bac205ffbab|f2e604fb0fcc2f9c|e709d76da7811a31|622094518||t19444.826299953s|438afab20f2407cc|32864367|rds|local|vector|||450.39|attribute variables are assumed to be spatially constant throughout all geometries|
+WQP_loc_N|stem|08f9629581b2bde0|2a5513d0d9889e82|d8beda91e8d91d68|1280207331||t19444.8340477076s|e19712209af2ad01|122726|rds|local|vector|||16.86||
+WTTP_infl|stem|e08040da509d5f5f|418a0edd22a2ce6a|6240e3bda9792f6b|-1345600356||t19446.9483732616s|b0ea5e124736f522|632178|rds|local|vector|||4998.69||
