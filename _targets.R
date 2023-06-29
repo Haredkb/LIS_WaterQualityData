@@ -1,6 +1,9 @@
 ## Load your packages, e.g. library(targets).
 source("./packages.R")
 
+
+## To Run Target, use tar_make() in the console - nothing in brackets
+
 # target = function_to_make(arg), ## drake style
 # tar_target(target2, function_to_make2(arg)) ## targets style
 
@@ -15,21 +18,21 @@ tar_plan(
   
   #For Dam Locations
   tar_target(NID_file,
-             "..//NID_NE.csv",
+             "data/NID_NE.csv",
              format = "file"),
 
   tar_target(LIS_DB_sf_file,
-             "..//LIS_Database_Points.shp",
+             "data/LIS_Database_Points.shp",
              format = "file"),
   
   LIS_poly = st_read("data/LIS_watershed_GEO.shp"),
-  LIS_dbLoc = st_read("../../../200_Data/230_SpatialData/LIS_DBpoint_snapNHD.shp"),
-  flowlines = fix_flowlines("LIS_flowlines.shp"),#from LISS_nhd_plus_.R #readRDS("..//NHD_flowlinesHR_0110_0108.RDS"),
-  catchment = st_make_valid(st_read("LIS_catchments.shp",crs = 4326)),#readRDS("..//NHD_catchment_0110_0108.RDS"),
+  LIS_dbLoc = st_read("data/LIS_DBpoint_snapNHD.shp"),
+  flowlines = fix_flowlines("data/LIS_flowlines.shp"),#from LISS_nhd_plus_.R #readRDS("..//NHD_flowlinesHR_0110_0108.RDS"),
+  catchment = st_make_valid(st_read("data/LIS_catchments.shp",crs = 4326)),#readRDS("..//NHD_catchment_0110_0108.RDS"),
   NID_df = readr::read_csv(NID_file),
   modelBoundaryFile = read_sf(LIS_DB_sf_file),
   stateList=c("VT","CT","RI", "NH", "MA"),
-  CT_hydro = st_read("C:\\Users\\hared\\Dropbox\\ResearchProjects\\_GeneralData_\\CT\\Connecticut_Hydrography_Set\\Connecticut_Hydrography_Set.shp"),
+  CT_hydro = st_read("data/Connecticut_Hydrography_Set.shp"),
   #SET UP BASE INPUT FILES 
   model_points = st_transform(modelBoundaryFile,"epsg:4326"),
   bbox_num = round(st_bbox(model_points),2), #needs to be rounded for many DVStats Functions

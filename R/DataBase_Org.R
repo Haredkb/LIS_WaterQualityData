@@ -1,6 +1,6 @@
 fix_flowlines <- function(flowline_shp){
   
-  proper_NHDcol <- readRDS("NHD_column_names.RDS")
+  proper_NHDcol <- readRDS("data/NHD_column_names.RDS")
   x <- proper_NHDcol[! proper_NHDcol %in% c('Shape')]
   x <- c(x, "geometry")
   

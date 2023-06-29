@@ -49,12 +49,10 @@ write.csv(WQ_Display, "C:\\Users\\hared\\Dropbox\\UConn\\Projects\\800_LISS_Land
 write.csv(WQ_Raw, "C:\\Users\\hared\\Dropbox\\UConn\\Projects\\800_LISS_LandUse\\300_Analysis\\Data_WQ_SVIC_RawDB.csv", row.names = FALSE)
 
 
-############################################################################
-
-
-
-
+#######################
 #check plots
+#######################
+
 df_WQ_BF <- Full_WQ_File %>%
   dplyr::filter(BaseflowConditions == 1 & 
                   is.na(site_infl) &
